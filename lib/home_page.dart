@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
           bodyMedium: TextStyle(color: AppColors.gray),
         )
       ),
-      home: OnboardingScreen(),
+      home: Onboarding_Screen(),
     );
   }
 }
