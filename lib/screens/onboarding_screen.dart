@@ -29,18 +29,8 @@ List<Map<String, dynamic>> data = [
   },
 ];
 
-class Onboarding_Screen extends StatefulWidget {
-  const Onboarding_Screen({super.key});
-
-  @override
-  State<Onboarding_Screen> createState() => _Onboarding_ScreenState();
-}
-
-class _Onboarding_ScreenState extends State<Onboarding_Screen> {
-
-  final PageController pageController = PageController();
-  int _currentPage = 0;
-
+class Onboarding_Screen extends StatelessWidget {
+  const  Onboarding_Screen({super.key});
   @override
   Widget build(BuildContext context) {
 
@@ -65,13 +55,7 @@ class _Onboarding_ScreenState extends State<Onboarding_Screen> {
         child: Stack(
           children: [
             PageView.builder(
-              controller: pageController,
               itemCount: data.length,
-              onPageChanged: (index) {
-                setState(() {
-                  _currentPage = index;
-                });
-              },
               itemBuilder: (context, index) {
                 return Padding(
                   padding: EdgeInsets.only(top: 20, left: 30, right: 30),
@@ -82,7 +66,6 @@ class _Onboarding_ScreenState extends State<Onboarding_Screen> {
                       Text(data[index]['titleTwo'], style: titleStyle,),
                       const SizedBox(height: 30,),
                       Text(data[index]['description'], style: descriptionStyle,),
-                      // Image.asset(data[index]['emoji']),
                        const SizedBox(height: 44,),
                       Row(
                         children: List.generate(
@@ -92,7 +75,7 @@ class _Onboarding_ScreenState extends State<Onboarding_Screen> {
                             width: index == i ? 45 : 25,
                             margin: EdgeInsets.only(right: 10),
                             decoration: BoxDecoration(
-                              color: _currentPage == i ? Colors.white : Colors.grey,
+                              color: index == i ? Colors.white : Colors.grey,
                               borderRadius: BorderRadius.circular(10),
                             ),
                           ),
