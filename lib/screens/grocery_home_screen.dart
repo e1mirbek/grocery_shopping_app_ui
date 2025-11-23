@@ -1,5 +1,8 @@
 
 
+// Ссылка для курс IT Space : https://meet.google.com/ppj-uyin-dxj
+
+
 import 'package:flutter/material.dart';
 import 'package:grocery_shopping_app/screens/pages/categories_page.dart';
 import 'package:grocery_shopping_app/screens/pages/favourites_page.dart';
