@@ -5,7 +5,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../theme/app_colors.dart';
+import '../../theme/app_colors.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppBar({super.key});
@@ -24,7 +24,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Hey, Halal",
+                  "Hey, User",
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.w600,
